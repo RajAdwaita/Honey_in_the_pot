@@ -1,0 +1,9 @@
+README.rst
+setup.py
+nanopot/__init__.py
+nanopot/__main__.py
+nanopot.egg-info/PKG-INFO
+nanopot.egg-info/SOURCES.txt
+nanopot.egg-info/dependency_links.txt
+nanopot.egg-info/not-zip-safe
+nanopot.egg-info/top_level.txt

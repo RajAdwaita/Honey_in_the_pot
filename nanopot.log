@@ -1,0 +1,5 @@
+2021-11-13 00:59:1636745380 INFO     HoneyPot initializing...
+2021-11-13 00:59:1636745380 INFO     Ports ['7770', '7771', '7772'] 
+2021-11-13 00:59:1636745380 INFO     Log filepath nanopot.log 
+2021-11-13 00:59:1636745392 INFO     Connection received: 7772: 127.0.0.1:55384
+2021-11-13 01:00:1636745403 INFO     Data received: 7772: 127.0.0.1:55384: b'Brother and sisters how are you all \n'

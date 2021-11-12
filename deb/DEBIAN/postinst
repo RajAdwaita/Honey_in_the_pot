@@ -1,0 +1,12 @@
+#!/bin/bash
+
+id -u nanopot &>/dev/null || useradd nanopot
+mkdir -p /home/nanopot
+
+/usr/bin/python3 -m pip uninstall -y nanopot
+/usr/bin/python3 -m pip install nanopot --no-cache-dir
+
+touch /var/log/nanopot.log
+chown -R nanopot:nanopot /var/log/nanopot.log
+
+systemctl enable nanopot
