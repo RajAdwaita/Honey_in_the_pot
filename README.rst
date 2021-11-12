@@ -16,7 +16,7 @@ NanoPot is a simple TCP honeypot written in Python 3.
 Source Code
 -----------
 
-https://github.com/DevDungeon/NanoPot
+
 
 PyPI package
 ------------
@@ -35,8 +35,7 @@ in the `docs/` directory, then viewing `docs/_build/html/index.html`.
 Live coding of this project
 ---------------------------
 
-- https://www.youtube.com/watch?v=77qj9o9pmek
-- https://www.youtube.com/DevDungeon
+
 
 Author
 ------
