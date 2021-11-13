@@ -33,7 +33,7 @@ class HoneyPot(object):
         client_socket.settimeout(15)
         try:
 
-            data = client_socket.recv(64)
+            data = client_socket.recv(64) 
             self.logger.info("Data received: %s: %s:%d: %s" %
                              (port, ip, remote_port, data))
 
