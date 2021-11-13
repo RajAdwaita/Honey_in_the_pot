@@ -1,0 +1,53 @@
+Client_Side
+
+------------------------- 
+
+nc -l 8888 => This starts a server on port 8888
+(-l means that  netcat has been instructed to Listen) 
+
+
+
+
+
+
+
+Server_Side
+
+-----------------------------
+
+nc IP_ADDRESS_OF_CLIENT port_no (here = 8888)
+type something on this device and that pops up on the other device
+
+
+
+---------------------------------------------------------------------------------------------
+
+MEHTOD - 2
+
+
+
+client side
+
+nc ip_address of srever 3000
+TYPE_TEXT
+
+
+
+
+
+server side
+
+nc -l -p 3000
+ifconfig => TO GET THE IP OF THIS MACHINE 
+
+
+
+
+TRYING ON A WEBSITE 
+--------------------------------------------------------------
+
+nmap www.google.com
+nc ip_add_google 80
+HEAD / HTTP/1.0
+
+
