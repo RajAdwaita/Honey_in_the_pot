@@ -13,7 +13,8 @@ setup(
     name='nanopot',
     version='1.0.0',
     description='Simple TCP honeypot',
-    long_description=readme_file_contents(),   #  every time we push it to pip install will always have information from our readme file
+    # every time we push it to pip install will always have information from our readme file
+    long_description=readme_file_contents(),
     author='RajModak',
     author_email='adwaitaraj@gmail.com',
     license='MIT',
