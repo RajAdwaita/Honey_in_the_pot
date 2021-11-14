@@ -49,8 +49,8 @@ class HoneyPot(object):
 
             client_handler.start()  # stop_listening(self):
 
-    def start_listening(self):  # TODO: add port to start_listening
-        for port in self.ports:
+    def start_listening(self):  # add port to start_listening
+        for port in self.ports:  # go through each port in ports
             self.listener_threads[port] = threading.Thread(  # TODO: add port to thread
                 target=self.start_new_listener_thread, args=(port,))
 
@@ -60,14 +60,20 @@ class HoneyPot(object):
         self.start_listening()
 
     def prepare_logger(self):  # TODO: add log filepath to logger
-        logging.basicConfig(level=logging.DEBUG,
+
+        # we are setting up logging to file and console
+
+        logging.basicConfig(level=logging.DEBUG,  # add log level to logger (DEBUG, INFO, WARNING, ERROR, CRITICAL)
                             format='%(asctime)s %(levelname)-8s %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%s',
+                            # add log filepath to filename in basicConfig call above (logging.basicConfig)
                             filename=self.log_filepath,
-                            filemode='w')
-        logger = logging.getLogger(__name__) # 
-        console_handler = logging.StreamHandler()
+                            filemode='w')  # add filemode to logger file config (w) to overwrite file each time the program is run (a) to append to file each time the program is run
+        logger = logging.getLogger(__name__)  # add logger name to logger
+        console_handler = logging.StreamHandler()  # add console handler to logger
+
+        # add console handler level to logger
         console_handler.setLevel(logging.DEBUG)
 
-        logger.addHandler(console_handler)
+        logger.addHandler(console_handler)  # add console handler to logger
         return logger
