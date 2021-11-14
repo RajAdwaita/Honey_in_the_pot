@@ -11,6 +11,7 @@ def readme_file_contents():  # Read the README file
 
 
 setup(
+    # we don't have any such scripts as we are using the launcher
     name='nanopot',
     version='1.0.0',  # version number
     description='Simple TCP honeypot',
@@ -19,7 +20,7 @@ setup(
     author='RajModak',
     author_email='adwaitaraj@gmail.com',
     license='MIT',
-    packages=['nanopot'],  # this is the name of the package
+    packages=['nanopot'],  # this is the name of the package - potx
 
     # if we have a package that is not a zip file then we need to set this to false
     zip_safe=False,

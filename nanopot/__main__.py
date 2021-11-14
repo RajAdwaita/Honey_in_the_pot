@@ -27,16 +27,11 @@ from nanopot import HoneyPot
 import sys
 
 
-def print_usage():  # this function is used to print the usage of the program
-    print("Usage:")  # print the usage of the program
-    print("     python -m nanopot /etc/nanopot.ini")
-
-
 # Check arguments
 
 # if the user does not provide the correct number of arguments
 if len(sys.argv) < 2 or sys.argv[1] in ['-h', '--help']:
-    print(__doc__)
+    print(__doc__)  # prints the docstring provided at the top of the file
     sys.exit(1)  # exit the program
 
 
@@ -50,6 +45,7 @@ config.read(config_filepath)  # we are reading the config file
 # using these we are running the .ini files and is the .ini files are empty then we log the default values
 
 # we are getting the ports from the config file
+# fallback value is basically setting the default value
 ports = config.get('default', 'ports', raw=True, fallback="8080,8888,9999")
 
 # we are getting the host from the config file
