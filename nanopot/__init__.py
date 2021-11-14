@@ -7,7 +7,6 @@ from socket import socket, timeout
 
 
 class HoneyPot(object):
-
     def __init__(self, bind_ip, ports, log_filepath):
         # doing a sanity check for the number of ports
         if len(ports) < 1:
@@ -40,12 +39,14 @@ class HoneyPot(object):
             client_socket.send("Access Denied.\n".encode(
                 'utf8'))  # send a string encoded in utf8
         except timeout:
-            # if timeout occurs then it catches the exception and then  display this message to control when an intruder  tries to pass any message
+            # if timeout occurs then it catches the exception and then  display this
+            # message to control when an intruder  tries to pass any message
 
             pass  # just pass in case of exception do not do anything
         client_socket.close()  # close the connection
 
-        # if there are no ports to listen to, it will start a new port and listen to it using start_listening() function
+        # if there are no ports to listen to, it will start a new port and listen
+        # to it using start_listening() function
     def start_new_listener_thread(self, port):
         listener = socket()  # add socket type to socket
         listener.bind((self.bind_ip, int(port)))  # add bind ip to socket
@@ -65,7 +66,8 @@ class HoneyPot(object):
     def start_listening(self):  # add port to start_listening
         for port in self.ports:  # go through each port in ports
             self.listener_threads[port] = threading.Thread(  # we are storing a new thread in listeners_thread dictionary
-                target=self.start_new_listener_thread, args=(port,))  # the args is a tuple of ports to be passed to the target function
+                target=self.start_new_listener_thread, args=(port,))
+            # the args is a tuple of ports to be passed to the target function
             # from here we know what port it is listening to
 
             # start the thread and they are all listening to the ports
@@ -84,7 +86,8 @@ class HoneyPot(object):
                             datefmt='%Y-%m-%d %H:%M:%s',
                             # add log filepath to filename in basicConfig call above (logging.basicConfig)
                             filename=self.log_filepath,
-                            filemode='w')  # add filemode to logger file config (w) to overwrite file each time the program is run (a) to append to file each time the program is run
+                            filemode='w')  # add filemode to logger file config (w) to overwrite
+        #                                       file each time the program is run (a) to append to file each time the program is run
         logger = logging.getLogger(__name__)  # add logger name to logger
         console_handler = logging.StreamHandler()  # add console handler to logger
 

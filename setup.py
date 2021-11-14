@@ -8,8 +8,6 @@ def readme_file_contents():  # Read the README file
 
 
 # setup will have all info about the project and the packaging
-
-
 setup(
     # we don't have any such scripts as we are using the launcher
     name='nanopot',
@@ -27,4 +25,5 @@ setup(
     install_requires=[]  # list of packages that are required to run the project
 )
 
-# we can do python setup.py develop and it will link everything to my working stuff as if I did a python setup.py install
+# we can do python setup.py develop and it will link everything to my
+# working stuff as if I did a python setup.py install
