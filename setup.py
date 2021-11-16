@@ -10,7 +10,7 @@ def readme_file_contents():  # Read the README file
 # setup will have all info about the project and the packaging
 setup(
     # we don't have any such scripts as we are using the launcher
-    name='nanopot',
+    name='nanopot',  # potx
     version='1.0.0',  # version number
     description='Simple TCP honeypot',
     # every time we push it to pip install will always have information from our readme file

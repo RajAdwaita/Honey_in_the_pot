@@ -42,7 +42,7 @@ config = configparser.ConfigParser()  # we are creating a config parser object
 config.read(config_filepath)  # we are reading the config file
 
 
-# using these we are running the .ini files and is the .ini files
+# using these we are running the .ini files and if the .ini files
 # are empty then we log the default values
 
 
